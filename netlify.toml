@@ -1,20 +1,13 @@
-# netlify.toml
-
-# Build settings
 [build]
-  # Build command
-  command = "python build_heart.py"  # Replace with your build command
-
-
-
-
-
-
-# Optional: Redirects and headers
+  command = "python heart.py"  # Update with your Flask app's build command
+  publish = "templates"  # Update with the directory containing your templates
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/index.html"
+  to = "/templates/index.html"
   status = 200
 
-
+[[redirects]]
+  from = "/result.html"
+  to = "/templates/result.html"
+  status = 200
 
