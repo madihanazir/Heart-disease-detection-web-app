@@ -1,7 +1,20 @@
+# netlify.toml
+
+# Build settings
+[build]
+  # Build command
+  command = "python build_heart.py"  # Replace with your build command
+
+
+
+
+
+
+# Optional: Redirects and headers
 [[redirects]]
   from = "/*"
-  to = "/templates/index.html"
+  to = "/index.html"
   status = 200
-  from = "/result.csv"
-  to = "/templates/result.csv"
-  force=true
+
+
+
