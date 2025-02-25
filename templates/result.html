@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Heart Disease Prediction</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction Result</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Heart Disease Prediction Result</h1>
-    <p>{{ result }}</p>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-md bg-white p-6 rounded-lg shadow-lg text-center">
+        <h1 class="text-xl font-semibold text-gray-700">Prediction Result</h1>
+        <p class="mt-4 text-lg font-medium {% if result == 'You have heart disease.' %}text-red-600{% else %}text-green-600{% endif %}">
+            {{ result }}
+        </p>
+        <a href="/" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+            Try Again
+        </a>
+    </div>
 </body>
 </html>
