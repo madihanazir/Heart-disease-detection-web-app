@@ -52,3 +52,4 @@ def predict():
 
 if __name__ == '__main__':
     heart.run(debug=True)
+app = heart
