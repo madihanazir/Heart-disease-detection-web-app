@@ -1,6 +1,7 @@
 import os
 from flask import Flask, render_template, request
 import joblib
+import numpy as np
 
 heart = Flask(__name__)
 
@@ -39,7 +40,7 @@ def predict():
         thal = int(request.form.get('thal'))
     
         # Prepare data for model prediction
-        input_data = [[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]]
+        input_data = np.array([[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]])
         prediction = model.predict(input_data)
 
         # Determine result message
